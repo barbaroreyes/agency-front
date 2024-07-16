@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import {AgencyProvider} from "./context/agenciesContext";
 import {BrowserRouter as Router} from "react-router-dom"
@@ -12,10 +11,8 @@ root.render(
     <AgencyProvider>
       <Router>
         <App />
-  
     </Router>
-      
-    </AgencyProvider>
+   </AgencyProvider>
     
   </React.StrictMode>
 );
