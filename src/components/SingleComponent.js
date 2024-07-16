@@ -25,7 +25,7 @@ const SingleComponent = () => {
     return <div>Agency not found</div>;
   }
 
-  const { name, logo, contact } = single;
+  const { name, logo, email,address  ,phone, url} = single;
 
   return (
     <div className='group-container-details'>
@@ -33,10 +33,10 @@ const SingleComponent = () => {
       
       <img src={logo} alt={`${name} logo`} className="agency-logo" />
       <h4>{name}</h4>
-      <p>Address: {contact.address}</p>
-      <p>Phone: {contact.phone}</p>
-      <p>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
-      <p>Website: <a href={contact.url} target="_blank" rel="noopener noreferrer">{contact.url}</a></p>
+      <p>Address: {address}</p>
+      <p>Phone: {phone}</p>
+      <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
+      <p>Website: <a href={url} target="_blank" rel="noopener noreferrer">{url}</a></p>
     </div>
     </div>
   );

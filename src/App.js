@@ -12,8 +12,14 @@ function App() {
   return ( <>
    <Routes> 
      <Route path="/" element={<Home/>} />
-     <Route path="/createAgency" element={<CreateAgency/>} /> 
-     <Route path="/:id" element={<SingleComponent/>} />
+     <Route 
+     path="/createAgency"
+      element={<CreateAgency/>} 
+      /> 
+     <Route 
+     path="/:id" 
+     element={<SingleComponent/>}
+      />
    </Routes>
           </>
    
