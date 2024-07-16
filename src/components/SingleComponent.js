@@ -3,7 +3,7 @@ import { useParams , useNavigate } from 'react-router-dom';
 import { AgencyContext } from '../context/agenciesContext';
 
 const SingleComponent = () => {
-  const  agencies  = useContext(AgencyContext); // Ensure 'agencies' is used, not 'agency'
+  const  {agencies}  = useContext(AgencyContext); // Ensure 'agencies' is used, not 'agency'
   const { id } = useParams(); // Get the id from the URL
   const navigate = useNavigate();
 

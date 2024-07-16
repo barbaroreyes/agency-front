@@ -42,6 +42,10 @@ padding: 40px;
       flex-direction: row;
       flex-wrap: wrap;
     }
+    .group-container h3{
+      width: 100%;
+      text-align: center;
+    }
   
     .agency {
       width: 25%;
@@ -49,7 +53,7 @@ padding: 40px;
       padding: 40px;
       height: 60vh;
     }.agency-details{
-      
+
       width: 25%;
       margin: 60px;
       padding: 100px;

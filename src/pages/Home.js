@@ -5,7 +5,7 @@ import {Link} from  "react-router-dom"
 
 
 const Home = () =>{
-const agencies = useContext(AgencyContext);
+const { agencies} = useContext(AgencyContext);
  
  //render agencies here
  //map through agency array and return JSX for each agency
@@ -19,6 +19,8 @@ const agencies = useContext(AgencyContext);
  //use the target="_blank" and rel="noopener noreferrer" attributes on the link to open the agency's website in a new tab
 return (
       <div className="group-container">
+        <h3>DashBoard</h3>
+        <Link to ="/createAgency" >Create New agency</Link>
       {agencies.map((agency, i) => (
        
         <Link to={`/${agency._id}`} key={i} className="agency">
