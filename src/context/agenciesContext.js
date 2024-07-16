@@ -5,7 +5,7 @@ const  AgencyContext = createContext();
 export const AgencyProvider = ({children}) => {
 const baseUrl = "https://project-agency-six.vercel.app/";
 
-   const [agency, setAgency] = useState([]);
+   const [agencies, setAgencies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,7 +14,7 @@ const  fetchingData = async ( ) => {
 
  await axios.get(`${baseUrl}api/agency`)
       .then(response => {
-       setAgency(response.data.data);
+       setAgencies(response.data.data);
         setLoading(false);
       })
       .catch(error => {
@@ -37,7 +37,7 @@ const  fetchingData = async ( ) => {
   }
 
     return (
-        <AgencyContext.Provider value={{agency, loading, error}}>
+        <AgencyContext.Provider value={agencies}>
             {children}
         </AgencyContext.Provider>
 
