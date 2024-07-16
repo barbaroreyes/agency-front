@@ -1,26 +1,21 @@
-import { useContext } from'react';
-import  {AgencyContext} from  "./context/agenciesContext"
+import {Routes ,Route} from "react-router-dom"
+import Home from './pages/Home';
+import SingleComponent from './components/SingleComponent';
 import './App.css';
 
 
 
 function App() {
-const {agency} = useContext(AgencyContext)
 
-  return (
-    <div className="App">
-      {agency.map((agency, i) => (
-        <div key={i} className="agency">
-          <h1>{agency.name}</h1>
-          <img src={agency.logo} alt={`${agency.name} logo`} className="agency-logo" />
-          <p>{agency.contact.address}</p>
-          <p>{agency.contact.phone}</p>
-          <p><a href={`mailto:${agency.contact.email}`}>{agency.contact.email}</a></p>
-          <p><a href={agency.contact.url} target="_blank" rel="noopener noreferrer">{agency.contact.url}</a></p>
-        </div>
-      ))}
-    </div>
-  );
+
+  return ( <>
+   <Routes> 
+     <Route path="/" element={<Home/>} />
+     <Route path="/agency/:id" element={<SingleComponent/>} />
+   </Routes>
+          </>
+   
+     )
 }
 
 export default App;
