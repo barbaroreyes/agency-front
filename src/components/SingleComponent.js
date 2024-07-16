@@ -32,8 +32,7 @@ const SingleComponent = () => {
         `
       );
  
-    const updatedAgencies = 
-    agencies.filter(
+    const updatedAgencies = agencies.filter(
       a =>a._id!== id
       );
     setAgencies(updatedAgencies);
