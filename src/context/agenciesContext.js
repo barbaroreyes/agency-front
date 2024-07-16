@@ -3,7 +3,7 @@ import axios from 'axios';
 const  AgencyContext = createContext();
 
 export const AgencyProvider = ({children}) => {
-const baseUrl = "https://project-agency-six.vercel.app";
+const baseUrl = "https://project-agency-six.vercel.app/";
 
    const [agencies, setAgencies] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,10 +12,11 @@ const baseUrl = "https://project-agency-six.vercel.app";
 const  fetchingData = async ( ) => {
 
 
- await axios.get(`${baseUrl}/api/agency`)
+ await axios.get(`${baseUrl}api/agency`)
       .then(response => {
        setAgencies(response.data.data);
         setLoading(false);
+        console.log(response.data.data);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -23,7 +24,7 @@ const  fetchingData = async ( ) => {
         setLoading(false);
       });
     }
-
+  
   useEffect(() => {
    fetchingData()
   }, []);

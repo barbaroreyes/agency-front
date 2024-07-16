@@ -25,7 +25,7 @@ const SingleComponent = () => {
     return <div>Agency not found</div>;
   }
 
-  const { name, logo, contact ,trip } = single;
+  const { name, logo, contact } = single;
 
   return (
     <div className='group-container-details'>
