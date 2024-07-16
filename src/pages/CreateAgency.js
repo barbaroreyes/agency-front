@@ -1,7 +1,9 @@
 import {useState} from 'react';
+import {useNavigate} from  "react-router-dom"
 import axios from 'axios';
 const CreateAgency = () =>{
     const baseUrl = "https://project-agency-six.vercel.app/";
+    const navigate = useNavigate();
 
     const [agency, setAgency] = useState({
         name: '',
@@ -28,9 +30,9 @@ const CreateAgency = () =>{
             await axios.post(`${baseUrl}api/agency`,agency)
             .then(response => {
                 console.log(response);
-                alert("Agency Created Successfully");
+                
             })
-            
+           navigate("/") 
         } catch (error) {
             console.error("Error adding agency", error)
         }
