@@ -24,7 +24,7 @@ const CreateAgency = () =>{
      const  handleSubmit = async (e) =>{
         e.preventDefault();
         try {
-            await axios.post(`${baseUrl}/api/agency`)
+            await axios.post(`${baseUrl}api/agency`)
             .then(response => {
                 console.log(response);
                 alert("Agency Created Successfully");
