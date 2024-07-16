@@ -20,7 +20,7 @@ padding: 40px;
    height: 50px;
    margin: 50px;
   padding: 10px;
-  border-radius: 100%;
+  border-radius: 20%;
 }
 .item{
   margin: 10px;
@@ -28,6 +28,14 @@ padding: 40px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.agency-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
 }
  @media screen and (min-width: 762px) {
   .group-container {
@@ -42,7 +50,16 @@ padding: 40px;
       height: 60vh;
     }.agency-details{
       
-      display: flex;
+      width: 25%;
+      margin: 60px;
+      padding: 100px;
+      height: 30vh;
+    }.agency-logo{
+      width: 220px;
+      height: 220px;
+      margin: 30px;
+      padding: 10px;
+     
     }
 }
 @keyframes App-logo-spin {

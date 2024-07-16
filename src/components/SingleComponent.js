@@ -6,7 +6,11 @@ const SingleComponent = () => {
   const  agencies  = useContext(AgencyContext); // Ensure 'agencies' is used, not 'agency'
   const { id } = useParams(); // Get the id from the URL
   const navigate = useNavigate();
-  console.log(agencies);
+
+  // If the agencies array is empty, return a message
+  if (!agencies.length) {
+    return <div>No agencies available</div>;
+  }
 
   // If no id is provided, return a message
   if (!id) {
@@ -21,7 +25,7 @@ const SingleComponent = () => {
     return <div>Agency not found</div>;
   }
 
-  const { name, logo, contact } = single;
+  const { name, logo, contact ,trip } = single;
 
   return (
     <div className='group-container-details'>
